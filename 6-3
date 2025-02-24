@@ -1,0 +1,42 @@
+Console.WriteLine("Book");
+
+
+//Book setting 
+class Book
+{
+
+    public string Title { get; set; }
+    public int Author { get; set; }
+    public int Genre { get; set; }
+    public string Price{ get; set; }
+
+    public Book(string title, int author, int genre, string price)
+    {
+        Title = title;
+        Author = author;
+        Genre = genre;
+        Price = price;
+    }
+
+//Book info
+
+    public void ShowBookInfo()
+    {
+        Console.WriteLine($"Title: {Title}, Auther:{Author},Genre: {Genre}, Price:{Price}");
+    }
+}
+//create 2 Books
+class Main
+{
+    static void Main(string[] args)
+    {
+        Book book1 = new Book("Book of Live","james","Fiction", 12.99);
+        Book book2 = new Book("Life","Tom","Science Fictoin", 20.99);
+        
+
+        book1.ShowBookInfo();
+        book2.ShowBookInfo();
+        
+
+    }
+}
